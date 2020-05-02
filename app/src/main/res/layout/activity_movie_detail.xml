@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/poster_imageview"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/movie_poster"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/title"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/title_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/title_textview"
+            app:layout_constraintTop_toTopOf="@+id/title_textview" />
+
+        <TextView
+            android:id="@+id/release_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/release_date"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/title_textview"
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+        <TextView
+            android:id="@+id/release_date_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/release_date_textview"
+            app:layout_constraintEnd_toEndOf="@+id/title_text"
+            app:layout_constraintStart_toEndOf="@+id/release_date_textview"
+            app:layout_constraintTop_toTopOf="@+id/release_date_textview" />
+
+        <TextView
+            android:id="@+id/vote_avg_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/vote_average"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/release_date_textview"
+            app:layout_constraintTop_toBottomOf="@+id/release_date_text" />
+
+        <TextView
+            android:id="@+id/vote_avg_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/vote_avg_textview"
+            app:layout_constraintEnd_toEndOf="@+id/release_date_text"
+            app:layout_constraintStart_toEndOf="@+id/vote_avg_textview"
+            app:layout_constraintTop_toTopOf="@+id/vote_avg_textview" />
+
+        <TextView
+            android:id="@+id/synopsis_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/poster_imageview" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <Button
+            android:id="@+id/fav_btn"
+            android:layout_width="108dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_bckgrnd"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/vote_avg_textview"
+            app:layout_constraintTop_toBottomOf="@+id/vote_avg_text" />
+
+        <TextView
+            android:id="@+id/trailer_textview"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_standard"
+            android:drawablePadding="@dimen/min_standard"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/synopsis_text"
+            app:layout_constraintStart_toStartOf="@+id/synopsis_text"
+            app:layout_constraintTop_toBottomOf="@+id/synopsis_text" />
+
+        <TextView
+            android:id="@+id/review_textview"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_standard"
+            android:layout_marginBottom="@dimen/standard"
+            android:textColor="@color/black"
+            android:textSize="@dimen/standard_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/trailer_textview"
+            app:layout_constraintStart_toStartOf="@+id/trailer_textview"
+            app:layout_constraintTop_toBottomOf="@+id/trailer_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

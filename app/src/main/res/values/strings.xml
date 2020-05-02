@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="title">Title:</string>
+    <string name="release_date">Release Date:</string>
+    <string name="vote_average">Vote Average:</string>
+    <string name="movie_poster_content_desc">movie poster</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top rated</string>
+    <string name="movie_poster">Movie Poster</string>
+
+    <string name="favourites">Favourites</string>
+
+    <string name="no_reviews_error">No Reviews Available</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="no_trailers_available">No trailers available</string>
+    <string name="loading">Loading Trailer Video and Reviews…</string>
+    <string name="fav_icon_content_desc">favourite icon</string>
+    <string name="add_to_favourites">Add to Favourites</string>
+    <string name="remove_from_favourites">Remove from Favourites</string>
+</resources>
